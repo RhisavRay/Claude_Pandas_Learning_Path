@@ -1,0 +1,217 @@
+make,model,price_inr
+Honda,CB500F,550000
+Honda,CB650R,850000
+Honda,CBR600RR,1200000
+Honda,CBR1000RR-R,2300000
+Honda,Africa Twin,1450000
+Honda,CB300R,250000
+Honda,Hornet,900000
+Honda,Gold Wing,3200000
+Honda,X-ADV,1100000
+Honda,CB125R,160000
+Yamaha,MT-07,800000
+Yamaha,MT-09,1100000
+Yamaha,R1,2000000
+Yamaha,R3,400000
+Yamaha,R15 V4,185000
+Yamaha,FZ-S V3,125000
+Yamaha,Tenere 700,1050000
+Yamaha,TMAX 560,1300000
+Yamaha,XSR900,1100000
+Yamaha,Niken,1500000
+Kawasaki,Z650,750000
+Kawasaki,Z900,1000000
+Kawasaki,Ninja 400,500000
+Kawasaki,Ninja 650,750000
+Kawasaki,Ninja ZX-10R,2100000
+Kawasaki,Versys 650,800000
+Kawasaki,Versys 1000,1350000
+Kawasaki,W800,900000
+Kawasaki,H2,3500000
+Kawasaki,KLX300R,400000
+Suzuki,GSX-S750,850000
+Suzuki,GSX-S1000,1300000
+Suzuki,GSX-R600,1150000
+Suzuki,GSX-R1000R,2200000
+Suzuki,V-Strom 650,850000
+Suzuki,V-Strom 1050,1300000
+Suzuki,Burgman 650,1200000
+Suzuki,Hayabusa,1700000
+Suzuki,Intruder 150,130000
+Suzuki,SV650,700000
+Ducati,Panigale V4,2800000
+Ducati,Panigale V2,1800000
+Ducati,Monster,1400000
+Ducati,Multistrada V4,2500000
+Ducati,Scrambler 800,1000000
+Ducati,Diavel V4,2600000
+Ducati,SuperSport 950,1600000
+Ducati,Hypermotard 950,1500000
+Ducati,Desert X,2000000
+Ducati,XDiavel,2400000
+BMW,S1000RR,2500000
+BMW,S1000R,2000000
+BMW,R1250GS,2200000
+BMW,F850GS,1500000
+BMW,G310GS,400000
+BMW,G310R,280000
+BMW,M1000RR,3500000
+BMW,R1250RT,2800000
+BMW,F900R,1300000
+BMW,K1600GT,3500000
+KTM,Duke 200,195000
+KTM,Duke 390,310000
+KTM,Duke 790,1000000
+KTM,Duke 890,1100000
+KTM,RC 390,350000
+KTM,Adventure 390,380000
+KTM,Adventure 890,1300000
+KTM,Adventure 1290,2200000
+KTM,1290 Super Duke R,2300000
+KTM,EXC 450F,800000
+Royal Enfield,Classic 350,200000
+Royal Enfield,Meteor 350,215000
+Royal Enfield,Himalayan,230000
+Royal Enfield,Interceptor 650,330000
+Royal Enfield,Continental GT 650,340000
+Royal Enfield,Thunderbird 350,190000
+Royal Enfield,Hunter 350,155000
+Royal Enfield,Scram 411,215000
+Royal Enfield,Super Meteor 650,380000
+Royal Enfield,Shotgun 650,390000
+Bajaj,Pulsar NS200,140000
+Bajaj,Pulsar RS200,155000
+Bajaj,Dominar 400,230000
+Bajaj,Dominar 250,165000
+Bajaj,Pulsar 150,110000
+Bajaj,Pulsar N250,150000
+Bajaj,Avenger 220,130000
+Bajaj,CT110X,72000
+TVS,Apache RR310,270000
+TVS,Apache RTR200,145000
+TVS,Apache RTR160,115000
+TVS,Ronin,155000
+TVS,Raider 125,90000
+TVS,Jupiter 125,88000
+Hero,Splendor Plus,75000
+Hero,HF Deluxe,65000
+Hero,Xtreme 160R,120000
+Hero,Xpulse 200,140000
+Hero,Passion Pro,75000
+Hero,Glamour,85000
+Triumph,Street Triple R,1200000
+Triumph,Daytona 660,1100000
+Triumph,Tiger 900,1600000
+Triumph,Bonneville T120,1400000
+Triumph,Speed Twin 900,1100000
+Triumph,Rocket 3,2200000
+Triumph,Tiger 1200,2500000
+Triumph,Trident 660,850000
+Aprilia,RS660,1500000
+Aprilia,Tuono 660,1300000
+Aprilia,RSV4,2800000
+Aprilia,Tuono V4,2400000
+Aprilia,Dorsoduro 900,1200000
+Aprilia,Shiver 900,1100000
+Harley-Davidson,Iron 883,850000
+Harley-Davidson,Sportster S,1600000
+Harley-Davidson,Fat Boy,2500000
+Harley-Davidson,Street Glide,3500000
+Harley-Davidson,Pan America 1250,2200000
+Harley-Davidson,Nightster,1300000
+Harley-Davidson,Road Glide,3800000
+Harley-Davidson,Low Rider S,2300000
+Indian,FTR1200,1900000
+Indian,Scout,1700000
+Indian,Challenger,3200000
+Indian,Chieftain,3500000
+Indian,Springfield,3000000
+Moto Guzzi,V7 Stone,1100000
+Moto Guzzi,V85 TT,1400000
+Moto Guzzi,V100 Mandello,1900000
+Benelli,Leoncino 500,550000
+Benelli,TRK 502,580000
+Benelli,302R,350000
+Benelli,Imperiale 400,230000
+Benelli,752S,800000
+CFMoto,300NK,200000
+CFMoto,650NK,550000
+CFMoto,650MT,620000
+CFMoto,700CL-X,700000
+CFMoto,800MT,900000
+Husqvarna,Vitpilen 401,400000
+Husqvarna,Svartpilen 401,410000
+Husqvarna,Norden 901,1400000
+MV Agusta,F3 800,2500000
+MV Agusta,Brutale 800,2200000
+MV Agusta,Turismo Veloce,2800000
+Kawasaki,Z400,480000
+Honda,CB200X,160000
+Honda,Shine 125,82000
+Honda,Unicorn 160,110000
+Yamaha,FZ25,145000
+Yamaha,MT-15 V2,165000
+Bajaj,Pulsar 220F,130000
+Suzuki,Gixxer 250,175000
+Suzuki,Gixxer SF 250,185000
+Honda,Activa 6G,78000
+TVS,NTorq 125,85000
+KTM,Adventure 250,280000
+Royal Enfield,Bullet 350,185000
+Honda,CBR150R,165000
+Kawasaki,W175,200000
+Yamaha,Saluto 125,75000
+Hero,Maestro Edge 125,82000
+Bajaj,Chetak Electric,155000
+TVS,iQube Electric,155000
+Ather,450X,150000
+Ola,S1 Pro,145000
+Kawasaki,Ninja H2 SX,3200000
+BMW,R nineT,1800000
+Triumph,Speed 400,230000
+Triumph,Scrambler 400X,260000
+Honda,NX500,700000
+Yamaha,Tracer 9,1400000
+Kawasaki,Eliminator 500,700000
+Suzuki,GSX-8S,900000
+Ducati,Monster 937,1500000
+BMW,F750GS,1300000
+KTM,SMC-R 690,1400000
+Honda,CB750 Hornet,850000
+Yamaha,R7,1000000
+Kawasaki,Z650RS,800000
+Suzuki,Katana,1400000
+Aprilia,SX 125,200000
+MV Agusta,Rush 1000,3500000
+Norton,V4CR,4500000
+Norton,Commando 961,2800000
+Bimota,Tesi H2,7500000
+Zero,SR/F,1500000
+Energica,Ego,2500000
+LiveWire,One,2200000
+Honda,Monkey 125,115000
+Honda,Grom,130000
+Kawasaki,Z125,150000
+Yamaha,XSR155,185000
+KTM,Duke 125,170000
+Husqvarna,Svartpilen 125,180000
+Royal Enfield,Guerrilla 450,330000
+Royal Enfield,Himalayan 450,295000
+KTM,Adventure 390 2024,420000
+Honda,CB350,210000
+Honda,Hness CB350,220000
+TVS,Apache RR310 2024,285000
+Bajaj,Pulsar N160,125000
+Hero,Karizma XMR,165000
+Triumph,Tiger Sport 660,1000000
+Benelli,Leoncino 800,1000000
+CFMoto,450SS,700000
+Zontes,350R,400000
+Zontes,350T,430000
+QJMotor,SRK 600,650000
+Kawasaki,Ninja 7 Hybrid,1300000
+Honda,CB750 Hornet 2024,900000
+Yamaha,MT-07 2024,850000
+BMW,S1000RR 2024,2700000
+Ducati,Streetfighter V4S,3000000
+Aprilia,RS 457,600000
