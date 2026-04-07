@@ -93,6 +93,18 @@ This is the exact trap. After filtering to expensive bikes, the index labels jum
 So:
     expensive.iloc[0] — ✅ gives you the first row by position, works fine
     expensive.loc[0] — 💥 KeyError because label 0 doesn't exist in the filtered result
-
-
 """
+
+
+
+# Single row, single column
+print(df.loc[5, 'make'])           # → 'Honda'
+
+# Multiple rows, multiple columns
+print(df.loc[0:4, ['make', 'model', 'price_inr']])
+
+# All rows, specific columns (note the : for all rows)
+print(df.loc[:, ['make', 'price_inr']])
+
+# Same with iloc
+print(df.iloc[0:5, [0, 1, 11]])    # columns by position
