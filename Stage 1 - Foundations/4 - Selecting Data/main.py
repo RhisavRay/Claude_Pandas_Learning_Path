@@ -108,3 +108,9 @@ print(df.loc[:, ['make', 'price_inr']])
 
 # Same with iloc
 print(df.iloc[0:5, [0, 1, 11]])    # columns by position
+
+"""
+Selecting Rows AND Columns Together
+
+This is where loc[] really shines in real analysis as giving column name is much more simpler than knowing the position of each of them
+"""
