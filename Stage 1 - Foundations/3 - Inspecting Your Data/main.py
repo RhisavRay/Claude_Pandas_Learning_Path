@@ -63,3 +63,7 @@ problems before they silently corrupt your analysis.
 
 
 
+# pd.set_option('display.float_format', '{:.2f}'.format)
+# print(df.describe().to_string())
+# print(df.describe(include='all').to_string())
+
