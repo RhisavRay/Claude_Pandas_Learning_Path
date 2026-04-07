@@ -114,3 +114,15 @@ Selecting Rows AND Columns Together
 
 This is where loc[] really shines in real analysis as giving column name is much more simpler than knowing the position of each of them
 """
+
+
+
+# Filter rows by condition, and select specific columns
+print(df.loc[df['make'] == 'Honda', ['make', 'model', 'price_inr']])
+
+"""
+loc[] with Boolean Conditions — The Most Common Real-World Usage
+
+This pattern — df.loc[condition, columns] — is something you'll write hundreds of times. It filters rows and selects specific columns in
+one clean operation.
+"""
