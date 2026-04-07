@@ -197,3 +197,8 @@ Pitfall:
 
 
 
+# print(df['make'].nunique())
+# print(df.nunique())
+# print(df['make'].unique())
+# print(df.unique())
+
