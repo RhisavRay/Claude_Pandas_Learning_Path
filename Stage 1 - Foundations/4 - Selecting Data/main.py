@@ -10,8 +10,6 @@ columns together?
 
 That's what loc[] and iloc[] are for. These are the two most important selection tools in pandas, and the confusion between them is
 responsible for more bugs than almost anything else in pandas code. Let's kill that confusion permanently.
-
-
 """
 
 
@@ -33,3 +31,9 @@ Think of it like seats in a cinema:
 """
 
 
+
+# print(df.iloc[0])         # first row (position 0)
+# print(df.iloc[-1])        # last row
+# print(df.iloc[0:5])       # first 5 rows (like Python list slicing)
+# print(df.iloc[0, 2])      # row at position 0, column at position 2
+# print(df.iloc[0:5, 0:3])  # first 5 rows, first 3 columns
