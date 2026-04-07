@@ -202,3 +202,51 @@ Pitfall:
 # print(df['make'].unique())
 # print(df.unique())
 
+"""
+8. df.nunique(), df['...'].nunique() and df['...'].unique()
+
+nunique() answers "how many distinct values?" — useful for understanding cardinality.
+
+unique() answers "what are they?" — useful for spotting typos or inconsistencies ('Honda' vs 'honda' vs 'HONDA' would show up as three
+separate values).
+
+
+Pitfall:
+    By default it excludes NaN values from the count. If you want to include them, just use 'dropna = False' similar to how we used in
+    value_counts()
+
+
+Interesting observation:
+    'nunique()' returns just the number of unique elements under each column. So line 200 makes sense. We are trying to fetch number of
+    unique values in the 'make' column. But what about line 201? Try it and you will see that it returns an int64 series containing all the
+    nunique values for each column.
+    
+    But when we try the same for unique, we are getting an error.
+
+
+Why df.unique() fails but df.nunique() doesn't?
+
+    The reason is intentional design, not an oversight.
+    
+    nunique() asks "how many unique values?" — and that question has a clean, meaningful answer for every column independently. So pandas
+    simply runs it column by column and returns a summary. It's designed to work on both a Series and a DataFrame.
+    
+    unique() asks "give me the actual unique values" — and for a whole DataFrame this question doesn't make sense. Unique values of what?
+    All columns combined? Per column? In what structure do you return that? The answer becomes ambiguous and messy, so pandas simply
+    doesn't implement it on DataFrames at all. You get an AttributeError — the method doesn't exist on a DataFrame object.
+
+    The rule of thumb:
+        Methods that return a summary statistic (one number per column) tend to work on both. Methods that return the actual data values
+        are typically Series-only.
+
+
+Return types:
+
+df['make'].nunique() ---------> int -----------> A plain Python integer — just the count
+df.nunique() ----------------> Series ---------> One count per column, column names as index
+df['make'].unique() -------> StringArray ------> Array of the actual unique values
+df.unique() -------------> AttributeError ----> Doesn't exist on DataFrame
+"""
+
+
+
