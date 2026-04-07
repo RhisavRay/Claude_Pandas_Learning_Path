@@ -130,3 +130,12 @@ one clean operation.
 
 
 print(df[df['price_inr'] > 2000000].reset_index(drop=True))
+
+"""
+reset_index() — Cleaning Up After Filtering
+
+After filtering, if you want a clean 0, 1, 2... index again:
+
+drop=True means throw away the old index labels, don't keep them as a column. Without drop=True, the old index gets saved as a new column
+called index in your DataFrame — almost never what you want.
+"""
