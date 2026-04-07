@@ -98,16 +98,16 @@ So:
 
 
 # Single row, single column
-print(df.loc[5, 'make'])           # → 'Honda'
+# print(df.loc[5, 'make'])           # → 'Honda'
 
 # Multiple rows, multiple columns
-print(df.loc[0:4, ['make', 'model', 'price_inr']])
+# print(df.loc[0:4, ['make', 'model', 'price_inr']])
 
 # All rows, specific columns (note the : for all rows)
-print(df.loc[:, ['make', 'price_inr']])
+# print(df.loc[:, ['make', 'price_inr']])
 
 # Same with iloc
-print(df.iloc[0:5, [0, 1, 11]])    # columns by position
+# print(df.iloc[0:5, [0, 1, 11]])    # columns by position
 
 """
 Selecting Rows AND Columns Together
