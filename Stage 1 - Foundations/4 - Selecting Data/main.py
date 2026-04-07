@@ -79,3 +79,16 @@ except KeyError as e:
 first_label = expensive.index[0]
 print(f"\nexpensive.loc[{first_label}] - Actual first row of the expensive dataframe")
 print(expensive.loc[first_label][['make', 'model', 'price_inr']])
+
+"""
+⚠️ Where Everything Goes Wrong
+
+Lets recall something we did in topic 1 of this stage - filtering to find the expensive bikes
+
+This is the exact trap. After filtering to expensive bikes, the index labels jump to [3, 7, 24, 28, 33, 40...]. Label 0 no longer exists.
+So:
+    expensive.iloc[0] — ✅ gives you the first row by position, works fine
+    expensive.loc[0] — 💥 KeyError because label 0 doesn't exist in the filtered result
+
+
+"""
