@@ -186,3 +186,14 @@ One practical trick
 # print(df['type'].value_counts())
 # print(df['type'].value_counts(dropna = False))
 
+"""
+7. df['...'].value_counts()
+
+Gives you a frequency count of each unique value in a column. Incredibly useful for categorical columns like make, type, year
+
+Pitfall:
+    By default it excludes NaN values from the count. If you want to include them, do as done in line 187z
+"""
+
+
+
