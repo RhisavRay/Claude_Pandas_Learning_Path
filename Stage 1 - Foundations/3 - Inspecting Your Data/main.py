@@ -263,3 +263,17 @@ These tools aren't just for when something goes wrong. Run them before every ana
 
 
 
+"""
+Task 1 (Easy): Run df.info() on the full dataset. How many columns have missing values? How do you know?
+"""
+
+# print(df.info())
+"""
+Solution:
+    For my dataset, there are no missing values
+    From the range index I can see there are 216 entries, And for each column there are 216 non-null values. The numbers match up. This is
+    how I concluded
+"""
+
+
+
