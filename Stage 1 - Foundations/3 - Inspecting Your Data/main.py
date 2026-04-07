@@ -250,3 +250,16 @@ df.unique() -------------> AttributeError ----> Doesn't exist on DataFrame
 
 
 
+"""
+⚠️ The Inspection Mindset
+These tools aren't just for when something goes wrong. Run them before every analysis. Build a mental checklist:
+
+1. df.shape — do I have the rows/columns I expect?
+2. df.dtypes — did every column get the right type?
+3. df.info() — any missing values hiding somewhere?
+4. df.describe() — do the numeric ranges make sense?
+5. df['col'].value_counts() on key categorical columns — any unexpected values?
+"""
+
+
+
