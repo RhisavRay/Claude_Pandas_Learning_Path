@@ -51,3 +51,8 @@ iloc[] behaves exactly like Python list indexing. The rules you already know app
 # print(df.loc[0:5])                 # rows with labels 0 through 5
 # print(df.loc[0, 'make'])           # row label 0, column named 'make'
 # print(df.loc[0:5, 'make':'type'])  # rows 0-5, columns from 'make' to 'type'
+
+"""
+Critical difference from iloc[]: When slicing with loc[], the end is inclusive. loc[0:5] gives you labels 0,1,2,3,4,5 — all six. This is
+the opposite of Python's normal slicing behaviour and trips everyone up at least once.
+"""
