@@ -67,3 +67,34 @@ problems before they silently corrupt your analysis.
 # print(df.describe().to_string())
 # print(df.describe(include='all').to_string())
 
+"""
+4. df.describe()
+
+Gives you summary statistics for all numeric columns:
+    a. count — how many non-null values
+    b. mean — average
+    c. std — standard deviation (spread of values)
+    d. min, max — range
+    e. 25%, 50%, 75% — quartiles
+
+What to look for:
+    a. Does min or max look unrealistic? A price_inr of -500 or engine_cc of 99999 would signal bad data
+    b. Is count less than your total rows? Missing values
+    c. Is std very high relative to mean? High variance — could be legitimate or could be outliers
+
+Pitfall:
+    describe() silently skips non-numeric columns by default. You can include them by passing the argument 'include = all', as in line 68.
+    For object/str columns it shows count, unique, top (most frequent value), and freq (how often it appears).
+
+Why we used pd.set_option():
+    Had some issues with the float value being shown. When this statement is used every float in every DataFrame will display with 2 decimal
+    places from that point on.
+
+⚠️ One thing to be aware of:
+    This setting changes display only — the actual numbers in memory are untouched. It's purely cosmetic. Also, since price_inr is int64 in
+    your dataset, describe() is temporarily treating it as float for the statistics calculation — that's why it shows decimals in the output
+    at all. The underlying column is still integers.
+"""
+
+
+
