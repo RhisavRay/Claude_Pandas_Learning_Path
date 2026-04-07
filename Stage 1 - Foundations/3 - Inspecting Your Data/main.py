@@ -310,3 +310,17 @@ Solution:
 """
 
 
+
+"""
+Task 4 (Medium): Find how many unique bike makes are in the dataset. Then print the actual list of all unique makes.
+"""
+
+# print(df['make'].nunique())
+# print(df['make'].unique())
+
+"""
+Solution:
+    There are 29 unique bike makers
+"""
+
+
