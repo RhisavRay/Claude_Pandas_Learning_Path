@@ -160,3 +160,5 @@ The takeaway
 
 
 
+# print(df.dtypes)
+
