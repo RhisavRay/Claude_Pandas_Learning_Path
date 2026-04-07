@@ -56,3 +56,26 @@ iloc[] behaves exactly like Python list indexing. The rules you already know app
 Critical difference from iloc[]: When slicing with loc[], the end is inclusive. loc[0:5] gives you labels 0,1,2,3,4,5 — all six. This is
 the opposite of Python's normal slicing behaviour and trips everyone up at least once.
 """
+
+
+
+expensive = df[df['price_inr'] > 2000000]
+# print(expensive)
+print("Index labels after filtering:")
+print(expensive.index.to_list())    #Shows a list of only the index values of the new series for expensive bikes
+
+# iloc - Purely positional. Always starts from 0
+print("\nexpensive.iloc[0] - First row by position:")
+print(expensive.iloc[0][['make', 'model', 'price_inr']])
+
+# loc - Looks for the exact label 0
+print("\nexpensive.loc[0] - Row with label 0")
+try:
+    print(expensive.loc[0])
+except KeyError as e:
+    print(f"KeyError: {e} (Label 0 was not found)")
+
+# loc with the actual first label of the expensive dataframe
+first_label = expensive.index[0]
+print(f"\nexpensive.loc[{first_label}] - Actual first row of the expensive dataframe")
+print(expensive.loc[first_label][['make', 'model', 'price_inr']])
