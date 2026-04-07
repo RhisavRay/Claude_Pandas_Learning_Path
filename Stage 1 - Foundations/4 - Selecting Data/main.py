@@ -46,3 +46,8 @@ iloc[] behaves exactly like Python list indexing. The rules you already know app
 """
 
 
+
+# print(df.loc[0])                   # row with index LABEL 0
+# print(df.loc[0:5])                 # rows with labels 0 through 5
+# print(df.loc[0, 'make'])           # row label 0, column named 'make'
+# print(df.loc[0:5, 'make':'type'])  # rows 0-5, columns from 'make' to 'type'
