@@ -126,3 +126,7 @@ loc[] with Boolean Conditions — The Most Common Real-World Usage
 This pattern — df.loc[condition, columns] — is something you'll write hundreds of times. It filters rows and selects specific columns in
 one clean operation.
 """
+
+
+
+print(df[df['price_inr'] > 2000000].reset_index(drop=True))
