@@ -162,3 +162,24 @@ The takeaway
 
 # print(df.dtypes)
 
+"""
+6. df.types
+
+This gives you a Series where the index is your column names and the values are the dtype of each column. That's worth pausing on — the
+output of df.dtypes is itself a pandas Series, which means everything you can do with a Series, you can do with this output too.
+
+
+Why you run this right after every load?
+    Type inference can silently go wrong as we discussed in Topic 1.2. df.dtypes is your verification step — you're confirming that pandas
+    understood each column the way you intended. If price_inr shows up as str instead of int64, you know immediately that something went
+    wrong during loading, before that bad type causes a confusing error three steps later.
+
+
+One practical trick
+    Since df.dtypes returns a Series, you can filter it — for example, to see only non-numeric columns:
+    
+    df.dtypes[df.dtypes == 'object']
+"""
+
+
+
