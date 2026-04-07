@@ -25,3 +25,8 @@ of your data before anything else.
 
 
 
+# print(df.head())
+# print(df.head(10))
+# print(df.tail())
+# print(df.tail(10))
+
