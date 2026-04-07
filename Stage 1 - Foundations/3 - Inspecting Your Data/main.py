@@ -14,3 +14,5 @@ Pandas gives you a small set of tools specifically for this. Let's go through ea
 
 
 
+# print(df.shape)
+
