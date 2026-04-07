@@ -37,3 +37,12 @@ Think of it like seats in a cinema:
 # print(df.iloc[0:5])       # first 5 rows (like Python list slicing)
 # print(df.iloc[0, 2])      # row at position 0, column at position 2
 # print(df.iloc[0:5, 0:3])  # first 5 rows, first 3 columns
+
+"""
+iloc[] behaves exactly like Python list indexing. The rules you already know apply:
+    1. Zero-based
+    2. End of slice is exclusive —> 0:5 gives you positions 0,1,2,3,4 not 5
+    3. Negative indexing works —> -1 is the last row
+"""
+
+
