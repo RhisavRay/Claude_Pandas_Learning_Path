@@ -330,11 +330,11 @@ Task 5 (Tricky): Using only inspection tools — no filtering yet — can you fi
 And how many bikes in the dataset are not from that year? Think about which tools give you this information and how to combine them.
 """
 
-print(df['year'].value_counts())
-sum = 0
-for i in range(1, len(df['year'].value_counts())):
-    sum += df['year'].value_counts().iloc[i]
-print(sum)
+# print(df['year'].value_counts())
+# sum = 0
+# for i in range(1, len(df['year'].value_counts())):
+#     sum += df['year'].value_counts().iloc[i]
+# print(sum)
 
 
 """
@@ -342,3 +342,26 @@ Solution:
     From this output we can see that the year which appears the most frequently in the dataset is the year 2023 - 191
     Number of bikes from the other years will be a simple sum of the other years - 25
 """
+
+"""
+⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
+Problems with my solution to Task 5:
+
+Problem 1 — You're calling value_counts() repeatedly inside the loop.
+    Every iteration recalculates the entire value counts Series from scratch. For 216 rows it doesn't matter, but on a million-row dataset
+    this would be painfully slow. Always compute once, store, reuse.
+
+Problem 2 — You're overwriting Python's built-in sum.
+    Naming your variable sum shadows Python's built-in sum() function for the rest of that script. It won't cause an error here, but it's a
+    bad habit. Use total or count instead.
+
+Problem 3 — There's a much simpler way.
+    You already know the most frequent year has 191 bikes. You know total rows is 216. So no loop needed at all. This is the "think in
+    pandas" mindset — instead of iterating, ask yourself what you already know and subtract.
+
+Revised solution is below.
+"""
+
+year_value_counts = df['year'].value_counts()
+print(year_value_counts)
+print(df.shape[0] - year_value_counts.iloc[0])
