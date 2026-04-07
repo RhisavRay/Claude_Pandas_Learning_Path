@@ -118,7 +118,7 @@ This is where loc[] really shines in real analysis as giving column name is much
 
 
 # Filter rows by condition, and select specific columns
-print(df.loc[df['make'] == 'Honda', ['make', 'model', 'price_inr']])
+# print(df.loc[df['make'] == 'Honda', ['make', 'model', 'price_inr']])
 
 """
 loc[] with Boolean Conditions — The Most Common Real-World Usage
