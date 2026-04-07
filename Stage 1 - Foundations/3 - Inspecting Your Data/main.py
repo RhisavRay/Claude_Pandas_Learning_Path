@@ -277,3 +277,22 @@ Solution:
 
 
 
+"""
+Task 2 (Easy): Use df.describe() to find the most expensive and least expensive bike in the dataset. Also find the average horsepower
+across all bikes.
+"""
+
+# pd.set_option('display.float_format', '{:.2f}'.format)
+# print(df.describe().to_string())
+# print(df[df['price_inr'] == df['price_inr'].min()])
+# print(df[df['price_inr'] == df['price_inr'].max()])
+
+"""
+Solution:
+    The least expensive bike is the Hero HF Deluxe, 2023
+    The most expensive bike is the Bimota Tesi H2, 2022
+    The average/mean horsepower across all bikes is calculated to be 76.87
+"""
+
+
+
