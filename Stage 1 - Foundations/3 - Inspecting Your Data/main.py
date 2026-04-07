@@ -2,3 +2,15 @@ import pandas as pd
 
 df = pd.read_csv('../../data.csv')
 
+"""
+Topic — Inspecting Your Data
+
+Before you do anything with a dataset — cleaning, filtering, analysis — you need to know what you're working with. This is not optional.
+Skipping inspection and jumping straight into analysis is like driving in an unknown city without looking at the map first. You might get
+somewhere, but you'll probably take a wrong turn and not realize it until much later.
+
+Pandas gives you a small set of tools specifically for this. Let's go through each one properly.
+"""
+
+
+
