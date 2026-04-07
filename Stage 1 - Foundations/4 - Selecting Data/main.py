@@ -139,3 +139,19 @@ After filtering, if you want a clean 0, 1, 2... index again:
 drop=True means throw away the old index labels, don't keep them as a column. Without drop=True, the old index gets saved as a new column
 called index in your DataFrame — almost never what you want.
 """
+
+
+
+"""
+When to Use Which
+
+"Give me the first/last N rows" --------------> iloc[]
+"Give me row number X from the top" ----------> iloc[]
+"Give me rows matching a condition" ----------> loc[]
+"Give me rows by their actual index label" ---> loc[]
+"Filter rows AND select columns together" ----> loc[]
+
+When in doubt:
+    a. If you're thinking in terms of position, use iloc[].
+    b. If you're thinking in terms of labels or conditions, use loc[].
+"""
