@@ -42,3 +42,5 @@ Pitfall:
 
 
 
+# print(df.info())
+
