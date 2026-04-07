@@ -30,3 +30,15 @@ of your data before anything else.
 # print(df.tail())
 # print(df.tail(10))
 
+"""
+2. df.head() and df.tail()
+
+Used to visually sanity-check your data. Did it load correctly? Are the column names right? Do the values look reasonable?
+
+Pitfall:
+    head() only shows you the beginning. Dirty data — missing values, wrong types, corrupted entries — often hides in the middle or end of
+    a file. Don't assume the whole dataset is clean just because the first 5 rows look fine.
+"""
+
+
+
