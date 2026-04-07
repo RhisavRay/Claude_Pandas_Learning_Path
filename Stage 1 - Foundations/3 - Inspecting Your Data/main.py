@@ -183,3 +183,6 @@ One practical trick
 
 
 
+# print(df['type'].value_counts())
+# print(df['type'].value_counts(dropna = False))
+
