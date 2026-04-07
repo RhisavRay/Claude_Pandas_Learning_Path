@@ -16,3 +16,12 @@ Pandas gives you a small set of tools specifically for this. Let's go through ea
 
 # print(df.shape)
 
+"""
+1. df.shape
+
+Returns a tuple — (rows, columns). This is a property, not a method, so no parentheses. It's the first thing you check. Know the dimensions
+of your data before anything else.
+"""
+
+
+
