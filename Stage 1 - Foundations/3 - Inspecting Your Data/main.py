@@ -296,3 +296,17 @@ Solution:
 
 
 
+"""
+Task 3 (Medium): Use value_counts() to find out how many bikes of each type exist in the dataset. Which type has the most bikes? Which has
+the fewest?
+"""
+
+# print(df['type'].value_counts())
+
+"""
+Solution:
+    Most bikes are of the 'Naked' type, 98
+    Fewest bikes are of the 'Dirt' type, 2
+"""
+
+
