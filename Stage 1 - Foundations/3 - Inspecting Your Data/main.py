@@ -44,3 +44,22 @@ Pitfall:
 
 # print(df.info())
 
+"""
+3. df.info()
+
+This is the single most useful inspection tool. One call tells you:
+    a. Total number of rows
+    b. Range of the index values
+    c. Number of columns
+    d. Each column's name
+    e. How many non-null values each column has
+    f. Each column's dtype
+    g. How many columns with each dtype are present
+    h. Total RAM memory used by this dataframe
+
+If a column shows 200 non-null but your DataFrame has 215 rows — 15 values are missing in that column. This is how you catch missing data
+problems before they silently corrupt your analysis.
+"""
+
+
+
