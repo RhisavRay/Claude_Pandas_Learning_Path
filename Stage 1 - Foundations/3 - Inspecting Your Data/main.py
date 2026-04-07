@@ -98,3 +98,5 @@ Why we used pd.set_option():
 
 
 
+# print(df.columns)
+
