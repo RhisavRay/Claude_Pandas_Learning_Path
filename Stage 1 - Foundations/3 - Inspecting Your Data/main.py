@@ -324,3 +324,21 @@ Solution:
 """
 
 
+
+"""
+Task 5 (Tricky): Using only inspection tools — no filtering yet — can you figure out which year appears most frequently in the dataset?
+And how many bikes in the dataset are not from that year? Think about which tools give you this information and how to combine them.
+"""
+
+print(df['year'].value_counts())
+sum = 0
+for i in range(1, len(df['year'].value_counts())):
+    sum += df['year'].value_counts().iloc[i]
+print(sum)
+
+
+"""
+Solution:
+    From this output we can see that the year which appears the most frequently in the dataset is the year 2023 - 191
+    Number of bikes from the other years will be a simple sum of the other years - 25
+"""
