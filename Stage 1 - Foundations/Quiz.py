@@ -112,3 +112,48 @@ Solution:
 No. the iloc lien works as it isn't looking for the exact index 0. It is just finding the first entry of the new dataframe.
 While loc tries to look for the entry with index 0, which has been filtered out in the new dataframe.
 """
+
+
+"""
+Section C — Integration Questions
+"""
+
+
+"""
+Q11. Load data.csv, then show a summary that tells you — for the filtered set of bikes priced above ₹1,500,000 — how many rows there are,
+what the dtypes are, and the min/max/mean of price_inr for that filtered set. Do this using exactly three method calls on the filtered
+DataFrame.
+"""
+
+# filtered_dataframe = df[df['price_inr'] > 1500000]
+# print(filtered_dataframe.shape)
+# print(filtered_dataframe.dtypes)
+# print(filtered_dataframe['price_inr'].describe())
+
+
+
+"""
+Q12. You have this code:
+
+df = pd.read_csv('data.csv')
+df = df[df['make'] == 'Honda']
+df = df[df['type'] == 'Sport']
+print(df.iloc[0])
+print(df.loc[0])
+
+What does df.iloc[0] return? What does df.loc[0] return? Will df.loc[0] always fail here, or only sometimes? Explain the condition under
+which it might actually work.
+"""
+
+"""
+Solution:
+df.iloc[0] returns the entry for 2022 Honda CBR600RR.
+While df.loc[0] return a KeyError, simply because after adding the 2 filters, the entry with the index 0 got filtered out
+
+By itself, df.loc[0] will always fail in this case. But if the print statement looks like this:
+
+print(df.reset_index(drop = True).loc[0])
+
+In this case, this will work and return the same output as df.iloc[0]. This is because we have reset the indexing system, and now again
+this list has an entry with the index 0.
+"""
