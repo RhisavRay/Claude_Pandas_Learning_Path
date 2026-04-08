@@ -1,3 +1,6 @@
+import pandas as pd
+
+df = pd.read_csv('../data.csv')
 """
 Section A — Conceptual Questions
 
@@ -48,3 +51,64 @@ Problems this can create:
 Aggregate functions/operations on the price_inr field will not work, or give unexpected results
 """
 
+
+
+"""
+Section B — Code Questions
+"""
+
+
+"""
+Q6. Write code that loads data.csv and in one line prints the number of bikes for each make in descending order.
+"""
+
+# print(pd.read_csv('../data.csv')['make'].value_counts())
+
+
+
+"""
+Q7. Write code to find all bikes where engine_cc is greater than 1000 AND price_inr is less than 2,000,000. Show only make, model, engine_cc
+and price_inr.
+"""
+
+# filtered_dataframe = df[(df['engine_cc'] > 1000) & (df['price_inr'] < 2000000)]
+# print(filtered_dataframe[['make', 'model', 'engine_cc', 'price_inr']])
+
+
+
+"""
+Q8. Without using sort_values(), write code that retrieves the row containing the bike with the highest horsepower. Use only inspection and
+selection tools.
+"""
+
+# max_power = df['horsepower'].max()
+# print(df[df['horsepower'] == max_power].to_string(index=False))
+
+
+
+"""
+Q9. Write code that loads data.csv but only reads the make, model, type and price_inr columns, then checks how many unique type values exist,
+and prints the actual type names.
+"""
+
+# df_1 = pd.read_csv('../data.csv', usecols=['make', 'model', 'type', 'price_inr'])
+# print(df_1['type'].nunique())
+# print(df_1['type'].unique())
+
+
+
+"""
+Q10. Look at this code:
+
+df2 = df[df['type'] == 'Adventure']
+print(df2.iloc[0])
+print(df2.loc[0])
+
+Will both lines work? What will each print, or what error will occur and why?
+"""
+
+"""
+Solution:
+No. the iloc lien works as it isn't looking for the exact index 0. It is just finding the first entry of the new dataframe.
+While loc tries to look for the entry with index 0, which has been filtered out in the new dataframe.
+"""
