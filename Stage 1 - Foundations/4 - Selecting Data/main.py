@@ -129,7 +129,7 @@ one clean operation.
 
 
 
-print(df[df['price_inr'] > 2000000].reset_index(drop=True))
+# print(df[df['price_inr'] > 2000000].reset_index(drop=True))
 
 """
 reset_index() — Cleaning Up After Filtering
@@ -155,3 +155,79 @@ When in doubt:
     a. If you're thinking in terms of position, use iloc[].
     b. If you're thinking in terms of labels or conditions, use loc[].
 """
+
+
+
+"""
+Task 1 (Easy): Use iloc[] to retrieve the 10th row of the dataset. Then use iloc[] to retrieve the last row without hardcoding the row
+number.
+"""
+
+# print(df.iloc[9])
+# print(df.iloc[-1])
+
+
+
+"""
+Task 2 (Easy): Use loc[] to retrieve the row with index label 10. Then retrieve rows with labels 10 through 15. How many rows do you get?
+Does that match what you expected?
+"""
+
+# print(df.loc[10])
+# print(df.loc[10:15])
+
+"""
+Solution:
+I got 6 rows. And yes. It matched my expectations. Because when using '.loc', both limits of the index range are inclusive.
+"""
+
+
+
+"""
+Task 3 (Medium): Use loc[] in one line to get only the make, model, and price_inr columns for all bikes whose type is 'Sport'.
+"""
+
+# print(df.loc[df['type'] == 'Sport', ['make', 'model', 'price_inr']])
+
+
+
+"""
+Task 4 (Medium): Filter the dataset to bikes made by 'KTM'. After filtering, try accessing the first row using iloc[0] and then using
+loc[0]. What happens with each? Explain why.
+"""
+
+# KTM = df[df['make'] == 'KTM']
+# print(KTM.iloc[0])
+# print(KTM.loc[0])
+
+"""
+Solution:
+For '.iloc[0]' I got the first row of the filtered dataframe.
+But for 'loc[0]' I got 'KeyError: 0'. This is because in the filtered dataframe, no element with the label 0 is present
+"""
+
+
+
+"""
+Task 5 (Tricky): Using iloc[], retrieve every alternate row from the dataset — rows at positions 0, 2, 4, 6... Think about how Python
+slicing works and how that applies here. Can loc[] do the same thing on your dataset? Why or why not?
+"""
+
+# print(df.iloc[::2])
+# print(df.loc[::2])
+
+"""
+Solution:
+Yes. It can be done using '.iloc' as well as '.loc'. The reason being for this case, where all the index values are present, parsing over
+every other value of the indices is gonna work the same way for both.
+"""
+
+
+
+"""
+Task 6 (Tricky): Get the 3 most expensive bikes from the dataset showing only make, model, and price_inr. Do this using what you know — you
+may need to combine a method from a previous topic with iloc[]. Think about what needs to happen before you can use iloc[] to grab the top 3
+"""
+
+# pd.set_option('display.float_format', '{:.2f}'.format)
+# print(df.sort_values(by = 'price_inr', axis = 0, ascending=False, inplace = False, na_position = 'last').iloc[:3])
