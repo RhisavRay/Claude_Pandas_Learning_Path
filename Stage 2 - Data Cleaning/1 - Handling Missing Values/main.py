@@ -35,3 +35,22 @@ This has an important consequence: a column of integers that gains even one miss
 float, and an integer column can't hold a float, pandas upgrades the whole column to float64. You'll see your clean int64 column become
 float64 the moment one NaN sneaks in.
 """
+
+
+
+# Introduce some missing values for demonstration
+# df_dirty = df.copy()
+# df_dirty.loc[2, 'horsepower'] = np.nan
+# df_dirty.loc[5, 'price_inr'] = np.nan
+# df_dirty.loc[10, 'horsepower'] = np.nan
+# df_dirty.loc[15, 'make'] = np.nan
+# df_dirty.loc[20, 'price_inr'] = np.nan
+
+# print(' --- isnull() on a single column --- ')
+# print(df_dirty['horsepower'].isnull().head(15))
+#
+# print('\n --- sum of missing values per column --- ')
+# print(df_dirty.isnull().sum())
+#
+# print('\n --- which rows have ANY missing value --- ')
+# print(df_dirty[df_dirty.isnull().any(axis=1)])
