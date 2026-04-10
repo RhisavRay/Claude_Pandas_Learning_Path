@@ -71,7 +71,7 @@ Here's what these tools give you:
 
 
 
-# print(' \n--- axis=0 (scan down each column) --- ')
+# print(' \n--- axis=0 (scan down each column, the default value) --- ')
 # print(df_dirty.isnull().any(axis=0))
 # print(' \n--- axis=1 (scan across each row) --- ')
 # print(df_dirty.isnull().any(axis=1).head(20))
@@ -311,3 +311,6 @@ df_dirty.loc[100, 'engine_cc'] = np.nan
 
 
 
+"""
+
+"""
