@@ -312,5 +312,15 @@ df_dirty.loc[100, 'engine_cc'] = np.nan
 
 
 """
-
+Task 1 (Easy): Find how many missing values exist in each column of df_dirty. Then find the total number of missing values across the
+entire DataFrame.
 """
+
+# print('\n\n --- No of missing values of each column --- ')
+# print(df_dirty.isnull().sum())
+
+# print('\n\n --- Total no of missing values across all columns --- ')
+# print(df_dirty.isnull().sum().sum())
+
+
+
