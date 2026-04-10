@@ -140,3 +140,23 @@ Dropping Missing Values
 
 # df.dropna(inplace=True)   # modifies df directly
 # df = df.dropna()          # same result, but explicit reassignment
+
+"""
+⚠️ inplace — something you'll see everywhere:
+
+Both lines of code do the same thing. But inplace=True is actually being discouraged in modern pandas — it can cause subtle bugs in chained
+operations. The habit to build is df = df.dropna(). Always reassign explicitly.
+
+
+What inplace=True does?
+
+Normally when you call df.dropna(), pandas creates a new DataFrame with the rows removed and returns it. Your original df is untouched.
+That's why you need to reassign.
+
+With inplace=True, pandas skips creating a new object and modifies the original directly.
+
+
+Why it's being discouraged?
+
+The problem shows up with chained operations — when you do multiple operations in sequence. We will see this with the example below.
+"""
