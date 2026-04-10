@@ -54,3 +54,20 @@ float64 the moment one NaN sneaks in.
 #
 # print('\n --- which rows have ANY missing value --- ')
 # print(df_dirty[df_dirty.isnull().any(axis=1)])
+
+"""
+Detecting Missing Values
+
+
+Here's what these tools give you:
+
+    1. df.isnull() — returns a DataFrame of the same shape, with True where values are missing and False where they aren't. By itself it's
+    hard to read on large data.
+    2. df.isnull().sum() — the useful one. Collapses each column to a count of missing values. This is your go-to check after loading any
+     real dataset.
+    3. df.isnull().any(axis=1) — returns True for any row that has at least one missing value. axis=1 means "check across columns for each
+    row." Use it to isolate exactly which rows are problematic.
+"""
+
+
+
