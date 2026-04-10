@@ -82,8 +82,8 @@ axis is one of those things that keeps appearing everywhere in pandas, so let's 
 The Mental Model
 
 A DataFrame has two directions you can move in:
-    axis = 0 — move down the rows (across the row index)
-    axis = 1 — move across the columns
+    axis = 0 —> move down the rows (across the row index)
+    axis = 1 —> move across the columns
 
 Applied to isnull().any()
 
@@ -105,7 +105,8 @@ If you used axis=0 instead:
 
 df.isnull().any(axis=0)
 
-Now it scans down each column and asks "for this column, does any row have a missing value?" — which is what isnull().sum() also tells you, just as True/False instead of a count.
+Now it scans down each column and asks "for this column, does any row have a missing value?" — which is what isnull().sum() also tells you,
+just as True/False instead of a count.
 
 
 The Rule of Thumb
@@ -144,7 +145,9 @@ Dropping Missing Values
 ⚠️ inplace — something you'll see everywhere:
 
 Both lines of code do the same thing. But inplace=True is actually being discouraged in modern pandas — it can cause subtle bugs in chained
-operations. The habit to build is df = df.dropna(). Always reassign explicitly.
+operations. The habit to build is
+    df = df.dropna()
+Always reassign explicitly.
 
 
 What inplace=True does?
@@ -241,12 +244,14 @@ now also fixed.
 # df_dirty.loc[10, 'horsepower'] = np.nan
 # df_dirty.loc[5, 'price_inr'] = np.nan
 
+# print(df_dirty['horsepower'].iloc[0:15])
+
 # Fill with a fixed value
 # print(' --- Fill horsepower with 0 --- ')
 # print(df_dirty['horsepower'].fillna(0).iloc[0:15:2])
 
 # Fill with the mean of the column
-# mean_hp = df_dirty['horsepower' ].mean ()
+# mean_hp = df_dirty['horsepower' ].mean()
 # print(f'Mean horsepower: {mean_hp :. 2f}')
 # print(' --- Fill horsepower with column mean --- ')
 # print(df_dirty['horsepower'].fillna(mean_hp) . iloc[0:15:2])
@@ -283,10 +288,10 @@ is usually fine. Missing because the data was never collected → filling might 
 # df.loc[2, 'horsepower'] = np.nan
 # print('After adding NaN:', df['horsepower'].dtype)
 #
-# df['horsepower' ] = df['horsepower' ]. fillna(df['horsepower'].mean())
+# df['horsepower'] = df['horsepower' ]. fillna(df['horsepower'].mean())
 # print('After fillna:', df['horsepower'].dtype)
 #
-# df['horsepower' ] = df['horsepower'].astype(int)
+# df['horsepower'] = df['horsepower'].astype(int)
 # print('After converting back to int:', df['horsepower'].dtype)
 
 """
