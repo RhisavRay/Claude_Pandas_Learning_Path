@@ -296,3 +296,19 @@ is usually fine. Missing because the data was never collected → filling might 
 Notice — even after filling the NaN, the column stays float64. Filling doesn't automatically restore the original type. You have to
 explicitly convert back with astype(int) — which we'll cover properly in Topic 2.3. I'm flagging it now so it doesn't surprise you.
 """
+
+
+# Setup for tasks
+df_dirty = df.copy()
+
+# Introduce missing values
+df_dirty.loc[2, 'horsepower'] = np.nan
+df_dirty.loc[10, 'horsepower'] = np.nan
+df_dirty.loc[50, 'horsepower'] = np.nan
+df_dirty.loc[5, 'price_inr'] = np.nan
+df_dirty.loc[20, 'price_inr'] = np.nan
+df_dirty.loc[15, 'make'] = np.nan
+df_dirty.loc[100, 'engine_cc'] = np.nan
+
+
+
