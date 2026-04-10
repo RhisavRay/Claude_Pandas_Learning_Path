@@ -307,6 +307,9 @@ df_dirty.loc[50, 'horsepower'] = np.nan
 df_dirty.loc[5, 'price_inr'] = np.nan
 df_dirty.loc[20, 'price_inr'] = np.nan
 df_dirty.loc[15, 'make'] = np.nan
+df_dirty.loc[18, 'make'] = np.nan
+df_dirty.loc[25, 'make'] = np.nan
+df_dirty.loc[35, 'make'] = np.nan
 df_dirty.loc[100, 'engine_cc'] = np.nan
 
 
@@ -379,3 +382,30 @@ Fix this — but only if there are no more missing values in the column. Write c
 
 
 
+
+"""
+Task 6 (Tricky): Find all bikes where make is missing. For each of those rows, fill the missing make value by looking at what make the same
+model belongs to in the original clean df. Think carefully about how to look up a value from one DataFrame using information from another.
+"""
+
+print('\n\n --- List of rows where make is missing --- ')
+missing_make = df_dirty[df_dirty['make'].isnull()]
+print(missing_make)
+
+print(missing_make.index.to_list())
+
+for i in missing_make.index.to_list():
+    print('\n\n --- Extracting model name from this row --- ')
+    model_name = missing_make.loc[i, 'model']
+    print(model_name)
+
+    print('\n\n --- Finding make value for this model in the clean dataframe --- ')
+    make = df.loc[df['model'] == model_name, 'make'].values[0]
+    print(make)
+
+    print('\n\n --- filling dirty df with this new make value --- ')
+    df_dirty.loc[i, 'make'] = make
+    print(df_dirty.loc[i])
+
+print('\n\n --- Final corrected file --- ')
+print(df_dirty.loc[[15, 18, 25, 35], ['make', 'model']])
