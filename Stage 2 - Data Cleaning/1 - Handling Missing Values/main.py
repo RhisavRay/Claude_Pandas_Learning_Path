@@ -334,3 +334,17 @@ Task 2 (Easy): Display only the rows from df_dirty that have at least one missin
 
 
 
+
+"""
+Task 3 (Medium): Create a cleaned version of df_dirty by dropping all rows that have a missing value in either price_inr or horsepower. How
+many rows does the cleaned DataFrame have?
+"""
+
+# print('\n\n --- Removing rows with null value in price_inr or horsepower --- ')
+# df_clean = df_dirty.dropna(subset=['price_inr', 'horsepower'])
+
+# print('\n\n --- No of rows in the cleaned dataframe --- ')
+# print(len(df_clean))
+
+
+
