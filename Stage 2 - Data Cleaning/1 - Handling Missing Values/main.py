@@ -173,3 +173,66 @@ The problem shows up with chained operations — when you do multiple operations
 
 # Did the original df_dirty change?
 # print('NaN still in df_dirty?', df_dirty['horsepower'].isnull().sum())
+
+"""
+Here's the core issue. When you filter a DataFrame, pandas internally decides whether the filtered dataframe is a view (a window into the
+original data) or a copy (a brand new independent object). You don't get to control this — pandas decides based on how the operation was
+performed.
+
+This matters because:
+    If filtered is a view → inplace=True modifies the original df_dirty too. Unintended side effect.
+    If filtered is a copy → inplace=True modifies only the copy, and you might think you changed df_dirty but you didn't.
+
+Either way you're not fully in control of what got changed. This is the SettingWithCopyWarning you may have seen in pandas — it's pandas
+warning you that it's not sure whether you're modifying a view or a copy.
+
+And that is why explicit reassignment is always safe. Here there is zero ambiguity. You're saying: "take whatever dropna() returns — a
+guaranteed new object — and make df point to it." You always know exactly what changed and what didn't.
+"""
+
+"""
+How does pandas decide whether a filtered dataframe is a view or a copy?
+
+This is actually a really important finding — and it's specific to the pandas version we're running. Let me explain the full picture.
+
+
+The Old Behaviour (pandas < 2.0):
+
+In older pandas, when you filtered a DataFrame, pandas made an internal decision based on the type of operation:
+    1. Simple column selection like df['make'] → usually a view (shared memory with original)
+    2. Boolean filtering like df[df['make'] == 'Honda'] → usually a copy
+    3. Chained operations like df[df['make'] == 'Honda']['model'] → unpredictable — sometimes view, sometimes copy
+
+The rules were complex, inconsistent, and even pandas itself wasn't always sure. That's why it would throw the SettingWithCopyWarning — it
+was genuinely uncertain what you were operating on. This was a long-standing design flaw that confused everyone, including experienced
+users.
+
+
+The New Behaviour (pandas >= 3.0 — your version):
+
+Pandas 3.0 introduced Copy-on-Write (CoW) as a permanent, non-optional behaviour. The rule is now beautifully simple:
+    Any DataFrame that came from another DataFrame is treated as a copy — but only actually copied the moment you try to modify it.
+
+So in our version,
+    filtered = df[df['make'] == 'Honda']
+No copy made yet, memory is shared
+
+The moment you do,
+    filtered.loc[0, 'make'] = 'MODIFIED'
+Now pandas makes a copy, applies the change to that copy, and the original df is untouched
+
+This is why modifying filtered didn't affect df in the test above. pandas silently made a copy at the moment of modification.
+
+
+Should you still use df = df.dropna() style?
+
+Yes — and here's why even in pandas 3.0. Even though CoW protects you from accidentally modifying the original, inplace=True still returns
+None. So if you ever accidentally write:
+    df = df.dropna(inplace=True)   # ← common mistake
+df is now None. Your entire DataFrame is gone for the rest of the script. Explicit reassignment df = df.dropna() has no such risk.
+
+The habit of explicit reassignment is still the right one — CoW just means the other failure mode (accidentally changing the original) is
+now also fixed.
+"""
+
+
