@@ -26,7 +26,6 @@ sometimes encounter None (Python's null object) — pandas treats these as inter
 automatically in numeric columns.
 """
 
-
 # NaN is a float value from numpy
 # print(type(np.nan))   # → float
 
