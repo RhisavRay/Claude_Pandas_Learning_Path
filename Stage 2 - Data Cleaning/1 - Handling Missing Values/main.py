@@ -160,3 +160,16 @@ Why it's being discouraged?
 
 The problem shows up with chained operations — when you do multiple operations in sequence. We will see this with the example below.
 """
+
+# df_dirty = df.copy()
+# df_dirty.loc[2, 'horsepower'] = np.nan
+
+# Filtering creates a VIEW or COPY - pandas decides internally
+# filtered = df_dirty[df_dirty['make'] == 'Honda']
+
+# Now trying inplace on this filtered result
+# filtered.dropna(inplace=True)
+# print('Rows in filtered after inplace dropna:', len(filtered))
+
+# Did the original df_dirty change?
+# print('NaN still in df_dirty?', df_dirty['horsepower'].isnull().sum())
