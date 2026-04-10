@@ -278,3 +278,16 @@ is usually fine. Missing because the data was never collected → filling might 
 """
 
 
+
+# print('Original horsepower dtype:', df['horsepower'].dtype)
+#
+# df.loc[2, 'horsepower'] = np.nan
+# print('After adding NaN:', df['horsepower'].dtype)
+#
+# df['horsepower' ] = df['horsepower' ]. fillna(df['horsepower'].mean())
+# print('After fillna:', df['horsepower'].dtype)
+#
+# df['horsepower' ] = df['horsepower'].astype(int)
+# print('After converting back to int:', df['horsepower'].dtype)
+
+"""
