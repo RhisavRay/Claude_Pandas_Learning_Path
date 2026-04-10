@@ -28,7 +28,7 @@ automatically in numeric columns.
 
 
 # NaN is a float value from numpy
-print(type(np.nan))   # → float
+# print(type(np.nan))   # → float
 
 """
 This has an important consequence: a column of integers that gains even one missing value gets silently converted to float. Because NaN is a
