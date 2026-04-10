@@ -324,3 +324,13 @@ entire DataFrame.
 
 
 
+
+"""
+Task 2 (Easy): Display only the rows from df_dirty that have at least one missing value.
+"""
+
+# print('\n\n --- Rows that have at least one null value --- ')
+# print(df_dirty[df_dirty.isnull().any(axis=1) == True].to_string())
+
+
+
