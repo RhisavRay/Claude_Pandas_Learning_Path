@@ -236,3 +236,22 @@ now also fixed.
 """
 
 
+
+# df_dirty = df.copy()
+# df_dirty.loc[2, 'horsepower'] = np.nan
+# df_dirty.loc[10, 'horsepower'] = np.nan
+# df_dirty.loc[5, 'price_inr'] = np.nan
+
+# Fill with a fixed value
+# print(' --- Fill horsepower with 0 --- ')
+# print(df_dirty['horsepower'].fillna(0).iloc[0:15:2])
+
+# Fill with the mean of the column
+# mean_hp = df_dirty['horsepower' ].mean ()
+# print(f'Mean horsepower: {mean_hp :. 2f}')
+# print(' --- Fill horsepower with column mean --- ')
+# print(df_dirty['horsepower'].fillna(mean_hp) . iloc[0:15:2])
+
+# Forward fill - fill with the previous valid value
+# print(' --- Forward fill horsepower --- ')
+# print(df_dirty['horsepower'].ffill() . iloc[0:15:2])
