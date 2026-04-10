@@ -364,3 +364,18 @@ values with the median price. Verify your fills worked.
 
 
 
+
+"""
+Task 5 (Tricky): After filling missing values in Task 4, you'll notice horsepower is now float64 even though it should logically be integers.
+Fix this — but only if there are no more missing values in the column. Write code that checks first, then converts.
+"""
+
+# print(df_dirty['horsepower'])
+
+# if df_dirty['horsepower'].isnull().sum() == 0:
+#     df_dirty['horsepower'] = df_dirty['horsepower'].astype(int)
+
+# print(df_dirty['horsepower'])
+
+
+
