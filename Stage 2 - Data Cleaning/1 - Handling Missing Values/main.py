@@ -291,3 +291,8 @@ is usually fine. Missing because the data was never collected → filling might 
 # print('After converting back to int:', df['horsepower'].dtype)
 
 """
+⚠️ The Integer → Float Conversion Trap:
+
+Notice — even after filling the NaN, the column stays float64. Filling doesn't automatically restore the original type. You have to
+explicitly convert back with astype(int) — which we'll cover properly in Topic 2.3. I'm flagging it now so it doesn't surprise you.
+"""
