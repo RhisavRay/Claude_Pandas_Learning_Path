@@ -137,3 +137,6 @@ Dropping Missing Values
 """
 
 
+
+# df.dropna(inplace=True)   # modifies df directly
+# df = df.dropna()          # same result, but explicit reassignment
