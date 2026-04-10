@@ -255,3 +255,26 @@ now also fixed.
 # Forward fill - fill with the previous valid value
 # print(' --- Forward fill horsepower --- ')
 # print(df_dirty['horsepower'].ffill() . iloc[0:15:2])
+
+"""
+Filling Missing Values — fillna():
+
+Sometimes dropping rows is too aggressive. You want to fill in a reasonable value instead.
+
+Three common strategies — and each one is appropriate in different situations:
+    
+    1. Fill with a fixed value - Use when you know what the missing value should be. Example: if a bike has no listed fuel tank, treating it as 0 might make sense
+    contextually, or might be completely wrong depending on why it's missing.
+    
+    2. Fill with the column mean — The most common strategy for numeric data. It doesn't distort the average of the column because you're
+    filling with the average itself. But it does reduce variance — you're making the data look less spread out than it really is.
+    
+    3. Forward fill (ffill()) — fills each missing value with the previous valid value. Makes most sense for time series data where values
+    evolve gradually. On our bikes dataset it would be meaningless — why would a missing horsepower value equal the previous bike's
+    horsepower?
+
+The key question to ask before filling: Why is this value missing? The answer determines the right strategy. Missing at random → mean fill
+is usually fine. Missing because the data was never collected → filling might introduce false information.
+"""
+
+
