@@ -348,3 +348,19 @@ many rows does the cleaned DataFrame have?
 
 
 
+
+"""
+Task 4 (Medium): Instead of dropping, fill the missing horsepower values with the mean horsepower of the dataset. Fill the missing price_inr
+values with the median price. Verify your fills worked.
+"""
+
+# print('\n\n --- Filling missing horsepower values with the mean HP --- ')
+# mean_hp = df_dirty['horsepower'].mean()
+# df_dirty['horsepower'] = df_dirty['horsepower'].fillna(mean_hp)
+
+# print('\n\n --- Filling missing price_inr values with the median price_inr --- ')
+# median_price = df_dirty['price_inr'].median()
+# df_dirty['price_inr'] = df_dirty['price_inr'].fillna(median_price)
+
+
+
