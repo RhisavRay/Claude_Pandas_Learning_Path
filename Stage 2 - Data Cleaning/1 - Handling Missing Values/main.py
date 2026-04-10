@@ -76,3 +76,44 @@ Here's what these tools give you:
 # print(df_dirty.isnull().any(axis=0))
 # print(' \n--- axis=1 (scan across each row) --- ')
 # print(df_dirty.isnull().any(axis=1).head(20))
+
+"""
+axis is one of those things that keeps appearing everywhere in pandas, so let's get it right once and for all.
+
+The Mental Model
+
+A DataFrame has two directions you can move in:
+    axis = 0 — move down the rows (across the row index)
+    axis = 1 — move across the columns
+
+Applied to isnull().any()
+
+df.isnull().any(axis=1)
+
+any() is asking: "does at least one True exist?"
+The axis=1 tells it which direction to scan. So it scans across columns for each row — and asks "for this row, is any value missing?"
+
+Visually:
+         make    model   horsepower   price_inr
+row 2   False   False     True        False    → True  (found one)
+row 5   False   False     False       True     → True  (found one)
+row 7   False   False     False       False    → False (none found)
+
+It collapses each row horizontally into a single True/False answer.
+
+
+If you used axis=0 instead:
+
+df.isnull().any(axis=0)
+
+Now it scans down each column and asks "for this column, does any row have a missing value?" — which is what isnull().sum() also tells you, just as True/False instead of a count.
+
+
+The Rule of Thumb
+    axis = 0 → operation collapses rows (moves vertically, result is per column)
+    axis = 1 → operation collapses columns (moves horizontally, result is per row)
+
+This same axis parameter shows up in drop(), mean(), sum(), concat() and many more. Same logic applies everywhere.
+"""
+
+
