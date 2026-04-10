@@ -126,3 +126,14 @@ This same axis parameter shows up in drop(), mean(), sum(), concat() and many mo
 
 # Drop rows only if NaN exists in specific columns you care about
 # df_clean = df.dropna(subset=['price_inr', 'horsepower'])
+
+"""
+Dropping Missing Values
+
+⚠️ The big pitfall with dropna():
+    It's destructive. You lose the entire row because one column had a missing value. If your dataset has 20 columns and only one has a
+    missing value, you're throwing away 19 perfectly good data points per row. Always think before dropping — is the missing value in a
+    column that matters for your analysis?
+"""
+
+
