@@ -117,3 +117,12 @@ This same axis parameter shows up in drop(), mean(), sum(), concat() and many mo
 """
 
 
+
+# Drop any row that has at least one NaN
+# df_clean = df.dropna()
+
+# Drop only if ALL values in a row are NaN (rarely what gets practically used)
+# df_clean = df.dropna(how='all')
+
+# Drop rows only if NaN exists in specific columns you care about
+# df_clean = df.dropna(subset=['price_inr', 'horsepower'])
