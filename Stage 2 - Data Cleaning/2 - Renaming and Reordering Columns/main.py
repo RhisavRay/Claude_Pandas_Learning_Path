@@ -162,8 +162,16 @@ original order. Do this without hardcoding every column name — think about how
 # print('\n\n --- Column names before --- ')
 # print(df.columns.to_list())
 
+# One way to do it. But this is fragile, because after every pop and insert, the index/position of columns changes
 # col = df.pop('price_inr')
-# df.insert(3, 'price_inr', col)
+# df.insert(2, 'price_inr', col)
+# col = df.pop('type')
+# df.insert(2, 'type', col)
+
+# Below code is a better solution, when we know a set of columns need to be at the beginning/end
+# priority = ['make', 'model', 'type', 'price_inr']
+# remaining = [col for col in df.columns if col not in priority]
+# df = df[priority + remaining]
 
 # print('\n\n --- Column names after --- ')
 # print(df.columns.to_list())
