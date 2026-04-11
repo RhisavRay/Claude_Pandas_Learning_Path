@@ -38,3 +38,27 @@ the rest stay untouched.
 # Strip whitespace, lowercase, replace spaces with underscores
 # df.columns = [col.strip().lower().replace(' ', '_') for col in df.columns]
 # print(df.columns.to_list())
+
+"""
+Renaming All Columns at Once
+
+If you want to rename every column in one go, assign a list directly. This is useful when you're standardising an entire dataset — for
+example, making all names lowercase with underscores. But be careful — the list must have exactly the same length as the number of columns,
+and the order matters. If you get either wrong, you'll either get an error or silently mislabel columns.
+
+
+⚠️ Pitfalls with Renaming
+
+Pitfall 1 — Renaming a column that doesn't exist
+
+    df.rename(columns={'pricc_inr': 'price'})   # typo in key
+Pandas silently does nothing. No error, no warning. The column stays named price_inr. This is one of those quiet failures — always verify
+after renaming.
+
+Pitfall 2 — Duplicate column names
+
+Nothing stops you from renaming two columns to the same name.
+    df.rename(columns={'engine_cc': 'value', 'horsepower': 'value'})
+Now you have two columns called value. df['value'] will return both as a DataFrame instead of a Series. This causes confusing bugs
+downstream.
+"""
