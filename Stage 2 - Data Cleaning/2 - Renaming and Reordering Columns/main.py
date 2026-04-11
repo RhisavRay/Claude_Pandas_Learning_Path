@@ -99,3 +99,11 @@ A common need:
 In th code above pop() removes the column from the DataFrame and returns it as a Series. insert(position, name, data) puts it back wherever
 you want. This avoids having to type out all column names just to move one.
 """
+
+
+
+# Drop a single column
+# df = df.drop(columns=['seat_height_mm'])
+
+# Drop multiple columns
+# df = df.drop(columns=['seat_height_mm', 'fuel_tank_liters'])
