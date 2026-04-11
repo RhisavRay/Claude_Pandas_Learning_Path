@@ -62,3 +62,12 @@ Nothing stops you from renaming two columns to the same name.
 Now you have two columns called value. df['value'] will return both as a DataFrame instead of a Series. This causes confusing bugs
 downstream.
 """
+
+
+
+# Define your desired order
+# new_order = ['make', 'model', 'type', 'year', 'price_inr', 'engine_cc', 'horsepower', 'torque_nm', 'top_speed_kmh', 'weight_kg', 'fuel_tank_liters', 'seat_height_mm']
+
+# df = df[new_order]
+# print(df.columns.tolist())
+
