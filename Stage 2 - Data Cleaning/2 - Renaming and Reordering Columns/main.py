@@ -135,3 +135,18 @@ Task 1 (Easy): Rename price_inr to price, engine_cc to displacement, and top_spe
 
 # print('\n\n --- Column names after --- ')
 # print(df_renamed.columns.to_list())
+
+
+
+
+"""
+Task 2 (Easy): Drop the seat_height_mm and fuel_tank_liters columns from the DataFrame. Confirm they're gone.
+"""
+
+# print('\n\n --- Column names before --- ')
+# print(df.columns.to_list())
+
+# df = df.drop(columns=['seat_height_mm', 'fuel_tank_liters'])
+
+# print('\n\n --- Column names after --- ')
+# print(df.columns.to_list())
