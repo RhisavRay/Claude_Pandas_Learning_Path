@@ -215,3 +215,15 @@ not by hardcoding the new names directly, but by writing code that strips the su
 # print('\n\n --- Adding this to the original dataframe --- ')
 # df.columns = pd.Series(all_cols)
 # print(df.columns)
+
+
+# In the above code, we cannot nitpick for which values to alter and which to not. If we are working on something with a specific pattern
+# then this works fine. But if we wanna choose which ones to change, the below code will be better
+
+# print('\n\n --- Altering column names --- ')
+# df = df.rename(columns={
+#     'torque_nm': 'torque',
+#     'top_speed_kmh': 'top_speed',
+#     'seat_height_mm': 'seat_height'
+# })
+# print(df.columns.to_list())
