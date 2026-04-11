@@ -71,3 +71,12 @@ downstream.
 # df = df[new_order]
 # print(df.columns.tolist())
 
+"""
+Reordering Columns
+
+Pandas doesn't have a dedicated "reorder" function. You simply select columns in the order you want. This works because df[list_of_columns]
+selects columns in exactly the order you specify.
+"""
+
+
+
