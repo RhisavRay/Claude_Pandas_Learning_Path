@@ -150,3 +150,20 @@ Task 2 (Easy): Drop the seat_height_mm and fuel_tank_liters columns from the Dat
 
 # print('\n\n --- Column names after --- ')
 # print(df.columns.to_list())
+
+
+
+
+"""
+Task 3 (Medium): Reorder the columns so that make, model, type come first, followed by price_inr, followed by all remaining columns in their
+original order. Do this without hardcoding every column name — think about how to get the remaining columns programmatically.
+"""
+
+# print('\n\n --- Column names before --- ')
+# print(df.columns.to_list())
+
+# col = df.pop('price_inr')
+# df.insert(3, 'price_inr', col)
+
+# print('\n\n --- Column names after --- ')
+# print(df.columns.to_list())
