@@ -11,3 +11,14 @@ one of the first things you do when standardising a dataset before analysis.
 """
 
 
+
+# df_renamed = df.rename(columns={
+#     'price_inr': 'price',
+#     'engine_cc': 'displacement',
+#     'top_speed_kmh': 'top_speed'
+# })
+#
+# print('\n\n --- Before --- \n')
+# print(df.columns.to_list())
+# print('\n\n --- After --- \n')
+# print(df_renamed.columns.to_list())
