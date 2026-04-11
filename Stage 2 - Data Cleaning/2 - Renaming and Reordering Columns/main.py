@@ -182,3 +182,28 @@ Task 4 (Medium): Standardise all column names by making them uppercase. Do this 
 
 # print('\n\n --- Column names after --- ')
 # print(df.columns.to_list())
+
+
+
+
+"""
+Task 5 (Tricky): The column torque_nm has an inconsistency — the unit nm is part of the name, but horsepower has no unit in its name. Rename
+all columns that contain units in their name to remove the unit suffix, keeping only the base measurement name. Do this programmatically —
+not by hardcoding the new names directly, but by writing code that strips the suffix. Think about what string operation achieves this.
+"""
+
+# print('\n\n --- Column names before --- ')
+# all_cols = df.columns.to_list()
+# print(all_cols)
+
+# print('\n\n --- Fetching columns with _ in them --- ')
+# alter_cols = list(filter(lambda col: '_' in col, all_cols))
+# print(alter_cols)
+
+# print('\n\n --- Removing the units from the new list --- ')
+# all_cols = [col.rsplit('_', 1)[0] if '_' in col else col for col in all_cols]
+# print(all_cols)
+
+# print('\n\n --- Adding this to the original dataframe --- ')
+# df.columns = pd.Series(all_cols)
+# print(df.columns)
