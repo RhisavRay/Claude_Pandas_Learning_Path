@@ -80,3 +80,11 @@ selects columns in exactly the order you specify.
 
 
 
+print('Before:', df.columns.tolist())
+print()
+
+# Move price_inr to the front
+col = df.pop('price_inr')   # removes column and returns it as Series
+df.insert(0, 'price_inr', col)  # inserts it back at position 0
+
+print('After moving price_inr to front:', df.columns.tolist())
