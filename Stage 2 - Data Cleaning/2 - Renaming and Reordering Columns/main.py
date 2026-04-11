@@ -116,3 +116,22 @@ Sometimes you don't need a column at all. That is when we use df.drop()
 Always use columns= explicitly. df.drop() can also drop rows by index label — so without specifying columns=, pandas needs to guess what
 you mean and can drop the wrong thing.
 """
+
+
+
+
+"""
+Task 1 (Easy): Rename price_inr to price, engine_cc to displacement, and top_speed_kmh to top_speed. Verify by printing the column names.
+"""
+
+# print('\n\n --- Column names before --- ')
+# print(df.columns.to_list())
+
+# df_renamed = df.rename(columns={
+#     'price_inr': 'price',
+#     'engine_cc': 'displacement',
+#     'top_speed_kmh': 'top_speed'
+# })
+
+# print('\n\n --- Column names after --- ')
+# print(df_renamed.columns.to_list())
