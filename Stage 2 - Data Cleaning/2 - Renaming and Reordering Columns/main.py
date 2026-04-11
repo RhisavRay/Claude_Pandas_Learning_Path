@@ -107,3 +107,12 @@ you want. This avoids having to type out all column names just to move one.
 
 # Drop multiple columns
 # df = df.drop(columns=['seat_height_mm', 'fuel_tank_liters'])
+
+"""
+Dropping Columns
+
+Sometimes you don't need a column at all. That is when we use df.drop()
+
+Always use columns= explicitly. df.drop() can also drop rows by index label — so without specifying columns=, pandas needs to guess what
+you mean and can drop the wrong thing.
+"""
