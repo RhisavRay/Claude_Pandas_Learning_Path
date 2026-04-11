@@ -87,4 +87,12 @@ print()
 col = df.pop('price_inr')   # removes column and returns it as Series
 df.insert(0, 'price_inr', col)  # inserts it back at position 0
 
-print('After moving price_inr to front:', df.columns.tolist())
+"""
+Moving a Specific Column
+
+A common need:
+    Move one column to the front ,end or at any specified position without manually listing all others.
+
+In th code above pop() removes the column from the DataFrame and returns it as a Series. insert(position, name, data) puts it back wherever
+you want. This avoids having to type out all column names just to move one.
+"""
