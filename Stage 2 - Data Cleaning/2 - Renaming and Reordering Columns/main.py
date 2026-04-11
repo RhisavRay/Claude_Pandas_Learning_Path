@@ -167,3 +167,18 @@ original order. Do this without hardcoding every column name — think about how
 
 # print('\n\n --- Column names after --- ')
 # print(df.columns.to_list())
+
+
+
+
+"""
+Task 4 (Medium): Standardise all column names by making them uppercase. Do this in one line without hardcoding any column names.
+"""
+
+# print('\n\n --- Column names before --- ')
+# print(df.columns.to_list())
+
+# df.columns = df.columns.map(lambda x: x.upper())
+
+# print('\n\n --- Column names after --- ')
+# print(df.columns.to_list())
